@@ -1,2 +1,2 @@
 # PCA
-basic implementation of PCA
+basic implementation of Principal Component Analysis,PCA.
