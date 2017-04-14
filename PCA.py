@@ -35,3 +35,12 @@ print "---------------------------------------------------"
 evalue, evec = np.linalg.eig(sigma)
 print "eigen values are:\n", evalue
 print "eigen vectors are:\n", evec
+
+print "---------------------------------------------------"
+index = np.argsort(evalue)
+evalue = np.sort(evalue)
+evec = evec[:,index]
+print "sorted eigen values and eigen vectors"
+print evalue
+print "sorted eigen vectors according to eigen values"
+print evec
