@@ -1,4 +1,5 @@
 import numpy as np
+from numpy import linalg as LA
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
@@ -15,7 +16,7 @@ cov = np.identity(3)
 
 #"generating data points according to gaussian distribution"
 x = np.random.multivariate_normal(mean, cov, no_of_points).T
-print "dimension of data points is: (%d, %d)" %x.shape
+print "dimension of matrix is: (%d, %d)" %x.shape
 
 #"plotting data points generated from normal distribution"
 ax.scatter(x[0,:], x[1,:], x[2,:], zdir='z', s=10)
@@ -32,7 +33,7 @@ print "covariance matrix is:\n", sigma
 # ... matrix.
 
 print "---------------------------------------------------"
-evalue, evec = np.linalg.eig(sigma)
+evalue, evec = LA.eig(sigma)
 print "eigen values are:\n", evalue
 print "eigen vectors are:\n", evec
 
@@ -44,3 +45,24 @@ print "sorted eigen values and eigen vectors"
 print evalue
 print "sorted eigen vectors according to eigen values"
 print evec
+
+print "---------------------------------------------------"
+print "normalizing eigen vectors to have unit magnitude"
+mag = LA.norm(evec, axis = 0)
+evec_norm = evec/mag
+print "normalized eigen vectors"
+print evec
+
+print "---------------------------------------------------"
+print "selecting 2 maximum eigen values and eigen vectors"
+evec_new = evec_norm[:,:2]
+print "eigen vectors for projection are following"
+print evec_new
+
+print "---------------------------------------------------"
+print "transforming the data to new dimensions"
+x_new = np.dot(evec_new.T, x)
+print "new data points dimesion (%d %d)"%x_new.shape
+
+
+
