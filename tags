@@ -1,0 +1,42 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A	generate_data.py	/^A = np.array([[1, 1, 1], [0.5, 2, 1.0], [1.5, 1.0, 2.0]])  # Mixing matrix$/;"	v
+PCA	pca.py	/^class PCA:$/;"	c
+S	generate_data.py	/^S = np.c_[s1, s2, s3]$/;"	v
+X	generate_data.py	/^X = np.dot(S, A.T)  # Generate observations$/;"	v
+__init__	pca.py	/^  def __init__(self, data_matrix):$/;"	m	class:PCA
+ax	PCA.py	/^ax = plt.axes()$/;"	v
+cov	PCA.py	/^cov = np.identity(2)$/;"	v
+evalue	PCA.py	/^evalue = np.sort(evalue)$/;"	v
+evec	PCA.py	/^evec = evec[:,index]$/;"	v
+evec_new	PCA.py	/^evec_new = evec_norm[:,1]$/;"	v
+evec_norm	PCA.py	/^evec_norm = evec\/mag$/;"	v
+find_cov	pca.py	/^  def find_cov(self):$/;"	m	class:PCA
+find_eval_evec	pca.py	/^  def find_eval_evec(self):$/;"	m	class:PCA
+find_mean	pca.py	/^  def find_mean(self):$/;"	m	class:PCA
+find_std	pca.py	/^  def find_std(self):$/;"	m	class:PCA
+index	PCA.py	/^index = np.argsort(evalue)$/;"	v
+mag	PCA.py	/^mag = LA.norm(evec, axis = 0)$/;"	v
+max_n_eval_evec	pca.py	/^  def max_n_eval_evec(self, no_of_components):$/;"	m	class:PCA
+mean	PCA.py	/^mean = np.zeros(2)$/;"	v
+mu	PCA.py	/^mu = np.mean(x,axis=1)$/;"	v
+n_samples	generate_data.py	/^n_samples = 2000$/;"	v
+no_comp	bss.py	/^no_comp = 3$/;"	v
+no_of_points	PCA.py	/^no_of_points = 1000$/;"	v
+normalize	pca.py	/^  def normalize(self):$/;"	m	class:PCA
+pca_obj	bss.py	/^pca_obj = pca.PCA(gd.X)$/;"	v
+s1	generate_data.py	/^s1 = np.sin(2 * time)  # Signal 1 : sinusoidal signal$/;"	v
+s2	generate_data.py	/^s2 = np.sign(np.sin(3 * time))  # Signal 2 : square signal$/;"	v
+s3	generate_data.py	/^s3 = signal.sawtooth(2 * np.pi * time)  # Signal 3: saw tooth signal$/;"	v
+set_sample_placement	pca.py	/^  def set_sample_placement(self):$/;"	m	class:PCA
+sigma	PCA.py	/^sigma = np.cov(x)$/;"	v
+sort_eval_evec	pca.py	/^  def sort_eval_evec(self):$/;"	m	class:PCA
+time	generate_data.py	/^time = np.linspace(0, 8, n_samples)$/;"	v
+transform_lower_dim	pca.py	/^  def transform_lower_dim(self, no_of_components):$/;"	m	class:PCA
+transform_original_dim	pca.py	/^  def transform_original_dim(self, data_matrix):$/;"	m	class:PCA
+x	PCA.py	/^x = np.random.multivariate_normal(mean, cov, no_of_points).T$/;"	v
+x_new	PCA.py	/^x_new = np.dot(evec_new.T, x)$/;"	v
